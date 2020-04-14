@@ -1,4 +1,4 @@
-from flask import Flask , render_template,redirect
+from flask import Flask , render_template,redirect,request
 import requests
 
 app = Flask(__name__)   
@@ -12,7 +12,10 @@ def login():
 @app.route('/home')
 def redirect_home():
     return redirect('/')
-
-
+@app.route('/submit', methods = ['POST'])
+def submit():
+    name = request.form['user']
+    return "<h2>Hello {}".format(name)
+    
 if __name__ == '__main__':
     app.run(debug = True)

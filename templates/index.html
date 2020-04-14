@@ -10,5 +10,9 @@
         {% for f in fruits %}
             <h3>{{f}}</h3>
         {% endfor %}
+        <form action="/submit" method="POST">
+        <input type ="text" name="user" placeholder="Enter name">
+        <input type="submit">
+        </form>
     </body>
 </html>
