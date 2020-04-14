@@ -15,7 +15,10 @@ def redirect_home():
 @app.route('/submit', methods = ['POST'])
 def submit():
     name = request.form['user']
+    f = request.files['userfile']
+    f.save(f.filename)
     return "<h2>Hello {}".format(name)
+
     
 if __name__ == '__main__':
     app.run(debug = True)
