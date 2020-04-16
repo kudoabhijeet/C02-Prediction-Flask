@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Flask Demo App</title>
+        <title>Predict</title>
     </head>
     <body>
         <h1>
-            Flask Demo App 
+            Predict C02 Emmision : 
         </h1>
         {% for f in fruits %}
             <h3>{{f}}</h3>
         {% endfor %}
         <form action="/submit" method="POST" enctype="multipart/form-data">
-        <input type ="text" name="user" placeholder="Enter name">
-        <input type="file" name="userfile">
+        <input type ="text" name="engine_size" placeholder="Enter Engine Size">
         <input type="submit">
         </form>
     </body>
