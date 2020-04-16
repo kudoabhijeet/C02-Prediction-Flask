@@ -5,6 +5,14 @@ import pylab as pl
 import sklearn
 from sklearn import linear_model
 
+df =  pd.read_csv("Fuel.csv")
+df.head()
+
+msk = np.random.rand(len(df)) < 0.8
+train = cdf[msk]
+test = cdf[~msk]
+
+
 regr = linear_model.LinearRegression()
 train_x = np.asanyarray(train[['ENGINESIZE']])
 train_y = np.asanyarray(train[['CO2EMISSIONS']])
