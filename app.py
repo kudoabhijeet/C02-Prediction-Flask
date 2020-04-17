@@ -1,6 +1,6 @@
 from flask import Flask , render_template,redirect,request
 import requests
-from sklearn.externals import joblib
+import joblib
 
 app = Flask(__name__)   
 m = joblib.load('model.pkl')
@@ -16,7 +16,7 @@ def model():
 
         emission = str(m.predict([[engine_size]]))
         print(emission)
-    return render_template('index.html', predicted_emission = emission)
+    return render_template('index.html', emission = emission)
 
 # @app.route('/login')
 # def login():
