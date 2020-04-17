@@ -1,11 +1,11 @@
 
 import pandas as pd
 import numpy as np
-import pylab as pl
+#import pylab as pl
 import sklearn
 from sklearn import linear_model
 
-df =  pd.read_csv("Fuel.csv")
+df =  pd.read_csv("D:\FlaskApp\ML Model\model.py")
 df.head()
 
 msk = np.random.rand(len(df)) < 0.8
