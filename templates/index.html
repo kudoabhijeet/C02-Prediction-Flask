@@ -10,9 +10,12 @@
         {% for f in fruits %}
             <h3>{{f}}</h3>
         {% endfor %}
-        <form action="/submit" method="POST" enctype="multipart/form-data">
+        <form action="/" method="POST">
         <input type ="text" name="engine_size" placeholder="Enter Engine Size">
         <input type="submit">
+        <!-- {% if predicted_emision %} -->
+        <h1>Predicted Emsiion : <i>{{ predicted_emission }}</i></h1>
+        <!-- {% endif %}     -->
         </form>
     </body>
 </html>
