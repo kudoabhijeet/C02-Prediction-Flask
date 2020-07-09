@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Predict</title>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/new.css') }}">
     </head>
     <body>
         <h1>
-            Predict C02 Emmision : 
+            Predict C02 Emmision 
         </h1>
         {% for f in fruits %}
             <h3>{{f}}</h3>
         {% endfor %}
+        <div class="container">
         <form action="/" method="POST">
         <input type ="text" name="engine_size" placeholder="Enter Engine Size">
         <input type="submit">
         {% if emission %}
-        <h1>Prediction :{{ emission }}</h1>
+        <h1>Pred Emmision: {{ emission }}</h1>
         {% endif %}
         </form>
+       </div>
     </body>
 </html>

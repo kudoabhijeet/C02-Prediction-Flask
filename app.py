@@ -15,6 +15,8 @@ def model():
         engine_size = float(request.form['engine_size'])
 
         emission = str(m.predict([[engine_size]]))
+        emission = emission[:-2]
+        emission = emission[2:]
         print(emission)
     return render_template('index.html', emission = emission)
 
