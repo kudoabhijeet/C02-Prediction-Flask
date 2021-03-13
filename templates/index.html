@@ -1,24 +1,37 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/new.css') }}">
-    </head>
-    <body>
-        <h1>
-            Predict C02 Emmision 
-        </h1>
-        {% for f in fruits %}
-            <h3>{{f}}</h3>
-        {% endfor %}
-        <div class="container">
-        <form action="/" method="POST">
-        <input type ="text" name="engine_size" placeholder="Enter Engine Size">
-        <input type="submit">
-        {% if emission %}
-        <h1>Pred Emmision: {{ emission }}</h1>
-        {% endif %}
-        </form>
-       </div>
-    </body>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/new.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+
+</head>
+<body>
+    <div class="bg text-center">
+        <!--Div for Centered Text & Input-->
+        <div class="centered">
+            <form action="/" method="POST">
+                <p class="firstLine"> C &nbsp; O &nbsp; 2 &nbsp; </p>
+                <p class="secondLine">Predict CO2 Emmision with Engine Size</p>
+                <p> <input class="InputStyle" name ="engine_size" placeholder="Engine Size" style="font-family:Arial, FontAwesome"
+                        type="text"> </p>
+                        <button type="submit" class="btn btn-dark">Predict</button>
+                        <br/>
+                {% if emission %}
+                <p class="secondLine"> Pred Emmision: {{ emission }}</p>
+                {% endif %}
+            </form>
+        </div>
+        <!--Div for bottom Icons-->
+        <div class="social-btn"> <a href="https://github.com/kudoabhijeet" title="Github"><i class="fa fa-github"></i></a>
+            <a href="https://twitter.com/kudoabhijeet" title="Twitter"><i class="fa fa-twitter"></i></a>
+        </div>
+    </div>
+
+   
+    
+</body>
+
 </html>

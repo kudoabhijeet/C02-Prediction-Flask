@@ -1,15 +1,72 @@
-body {
-    align-items: center;
-    justify-content: center;
-    background-color: #086972;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+.bg {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    background-image: url('static\assets\bg.png');
+    background-size: 100% 100%;
+    background-position: top center
 }
-h1 {
-    text-align: center;
-    color: white;
-    
+
+.content {
+    margin-top: 20%
 }
-.container {
+
+.centered {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.InputStyle {
+    border-radius: 25px;
+    border: solid 1px white;
+    background: transparent;
     width: 300px;
-    margin: 0 auto;
+    padding: 10px 20px
+}
+
+input,
+input::-webkit-input-placeholder {
+    font-size: 12px;
+    color: white
+}
+
+.social-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 47%
+}
+
+i {
+    padding: 5px;
+    color: white
+}
+
+input,
+input:focus {
+    border: solid 1px white;
+    outline: 0;
+    -webkit-appearance: none;
+    box-shadow: nones;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none
+}
+
+.secondLine {
+    font-weight: 350;
+    font-size: 15px;
+    margin-bottom: 15%;
+    color: white
+}
+
+.firstLine {
+    font-size: 30px;
+    color: white
+}
+
+@media only screen and (max-width: 600px) {
+    .firstLine {
+        font-size: 20px
+    }
 }
